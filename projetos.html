@@ -24,7 +24,7 @@
     </nav>
   </div>
 </header>
-<main id="conteudo">
+<main id="conteudo" data-page="projetos">
 <section class="hero" aria-labelledby="titulo-projetos">
   <div class="container">
     <p class="eyebrow">Projetos e iniciativas</p>
@@ -39,20 +39,8 @@
       <p class="eyebrow">03 / Nossas frentes</p>
       <h2 id="projetos-titulo">Iniciativas que colocam a solidariedade em prática.</h2>
     </div>
-    <div class="cards">
-      <article class="card">
-        <picture><source srcset="assets/img/educacao.webp" type="image/webp"><img src="assets/img/educacao.jpg" alt="Criança sorrindo em uma ação de educação" width="293" height="193" loading="lazy"></picture>
-        <div class="card-body"><img class="card-icon" src="assets/img/icone-voluntariado.png" alt="" aria-hidden="true"><h3>Educação e oportunidades</h3><p>Apoiamos atividades educativas e ações que ampliam o acesso ao conhecimento.</p></div>
-      </article>
-      <article class="card">
-        <picture><source srcset="assets/img/doacao-alimentos.webp" type="image/webp"><img src="assets/img/doacao-alimentos.jpg" alt="Caixa com alimentos destinada a uma campanha de doação" width="293" height="193" loading="lazy"></picture>
-        <div class="card-body"><img class="card-icon" src="assets/img/icone-doacao.png" alt="" aria-hidden="true"><h3>Campanhas de doação</h3><p>Organizamos campanhas para arrecadar alimentos e recursos destinados às ações sociais.</p></div>
-      </article>
-      <article class="card">
-        <picture><source srcset="assets/img/sustentabilidade.webp" type="image/webp"><img src="assets/img/sustentabilidade.jpg" alt="Mudas sendo plantadas como parte de uma ação de sustentabilidade" width="260" height="193" loading="lazy"></picture>
-        <div class="card-body"><img class="card-icon" src="assets/img/icone-sustentabilidade.png" alt="" aria-hidden="true"><h3>Sustentabilidade</h3><p>Promovemos ações comunitárias voltadas ao cuidado com o ambiente e ao uso consciente de recursos.</p></div>
-      </article>
-    </div>
+    <div class="cards" id="lista-projetos"></div>
+    <noscript><p>Ative o JavaScript para ver a lista de projetos.</p></noscript>
   </div>
 </section>
 
@@ -90,5 +78,20 @@
   </div>
 </footer>
 
+<template id="tpl-projeto">
+  <article class="card">
+    <picture>
+      <source type="image/webp">
+      <img class="card-foto" height="193" loading="lazy" alt="">
+    </picture>
+    <div class="card-body">
+      <img class="card-icon" alt="" aria-hidden="true">
+      <h3></h3>
+      <p></p>
+    </div>
+  </article>
+</template>
+
+<script src="assets/js/templates.js" defer></script>
 </body>
 </html>
