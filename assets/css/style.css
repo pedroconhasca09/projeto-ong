@@ -444,6 +444,85 @@ select:invalid:not(:focus) {
   color: var(--muted);
   font-size: 0.9rem;
 }
+/* =========================================================
+   VALIDAÇÃO DINÂMICA DO FORMULÁRIO
+   ========================================================= */
+
+.field.is-invalid input,
+.field.is-invalid select,
+.field.is-invalid textarea {
+  border-color: #b42318;
+  background-color: #fff8f7;
+}
+
+.field.is-invalid input:focus,
+.field.is-invalid select:focus,
+.field.is-invalid textarea:focus {
+  outline: 3px solid rgba(180, 35, 24, 0.18);
+  outline-offset: 2px;
+}
+
+.field-error {
+  display: block;
+  margin-top: 0.15rem;
+  color: #b42318;
+  font-size: 0.86rem;
+  font-weight: 700;
+}
+
+.status-success {
+  background: #edf7ee;
+  color: #1b5e20;
+}
+
+.status-info {
+  background: #eef5fb;
+  color: #0b3d91;
+}
+
+.status-error {
+  background: #fff1f0;
+  color: #b42318;
+}
+
+/* =========================================================
+   HISTÓRICO DE CADASTROS
+   ========================================================= */
+
+.history-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0 0 1.5rem;
+  padding: 0;
+  list-style: none;
+}
+
+.history-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--white);
+}
+
+.history-item strong {
+  color: #17324d;
+}
+
+.history-item span {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.history-empty {
+  padding: 1rem;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--muted);
+  background: var(--white);
+}
 
 /* =========================================================
    BREAKPOINT 1 — DESKTOP MÉDIO
@@ -675,3 +754,4 @@ select:invalid:not(:focus) {
     scroll-behavior: auto;
   }
 }
+
